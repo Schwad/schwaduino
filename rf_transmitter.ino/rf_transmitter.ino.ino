@@ -78,6 +78,9 @@ void loop()
   button_one.update();
   button_two.update();
   button_three.update();
+  transmission_button.update();
+  cancel_button.update();
+  
 
   if ( button_one.pressed() ) {
     Serial.println("One pressed");
@@ -125,6 +128,7 @@ void loop()
           Serial.println("goin to the pub");
           break;
       }
+      one_number_of_presses = 0;
     }
 
     if(two_number_of_presses > 0) {
@@ -139,6 +143,7 @@ void loop()
           Serial.println("Bed for manatee?");
           break;
       }
+      two_number_of_presses = 0;
     }
 
     if(three_number_of_presses > 0) {
@@ -153,6 +158,7 @@ void loop()
           Serial.println("Maybe");
           break;
       }
+      three_number_of_presses = 0;
     }
   }
 
